@@ -94,7 +94,14 @@ public:
 	virtual void disconnect(Gate* gate, int dstNum)
 	{
 		node* temp = gate->getNode()->prev[dstNum];
-		temp = NULL;
+		node* nowTemp=gate->getNode();
+		for (int i = 0; i < PORTSIZE; i++)
+		{
+			if (temp->next[i] == nowTemp)
+			{
+				temp->next[i] = NULL;
+			}
+		}
 		gate->getNode()->prev[dstNum] = NULL;
 	}
 	virtual void setPortState(int state)
@@ -196,7 +203,14 @@ public:
 	virtual void disconnect(Gate* gate, int dstNum)
 	{
 		node* temp = gate->getNode()->prev[dstNum];
-		temp = NULL;
+		node* nowTemp = gate->getNode();
+		for (int i = 0; i < PORTSIZE; i++)
+		{
+			if (temp->next[i] == nowTemp)
+			{
+				temp->next[i] = NULL;
+			}
+		}
 		gate->getNode()->prev[dstNum] = NULL;
 	}
 
@@ -358,7 +372,14 @@ public:
 	virtual void disconnect(Gate* gate, int dstNum)
 	{
 		node* temp = gate->getNode()->prev[dstNum];
-		temp = NULL;
+		node* nowTemp = gate->getNode();
+		for (int i = 0; i < PORTSIZE; i++)
+		{
+			if (temp->next[i] == nowTemp)
+			{
+				temp->next[i] = NULL;
+			}
+		}
 		gate->getNode()->prev[dstNum] = NULL;
 	}
 
@@ -517,7 +538,14 @@ public:
 	virtual void disconnect(Gate* gate, int dstNum)
 	{
 		node* temp = gate->getNode()->prev[dstNum];
-		temp = NULL;
+		node* nowTemp = gate->getNode();
+		for (int i = 0; i < PORTSIZE; i++)
+		{
+			if (temp->next[i] == nowTemp)
+			{
+				temp->next[i] = NULL;
+			}
+		}
 		gate->getNode()->prev[dstNum] = NULL;
 	}
 
@@ -678,7 +706,14 @@ public:
 	virtual void disconnect(Gate* gate, int dstNum)
 	{
 		node* temp = gate->getNode()->prev[dstNum];
-		temp = NULL;
+		node* nowTemp = gate->getNode();
+		for (int i = 0; i < PORTSIZE; i++)
+		{
+			if (temp->next[i] == nowTemp)
+			{
+				temp->next[i] = NULL;
+			}
+		}
 		gate->getNode()->prev[dstNum] = NULL;
 	}
 
